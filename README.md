@@ -30,8 +30,8 @@
 
 ```bash
 # Клонируйте репозиторий
-git clone https://github.com/Egor-Vlasov/docx-text-replacer.git
-cd docx-text-replacer
+git clone https://github.com/Egor-Vlasov/text_replacer_in_word_docx.git
+cd text_replacer_in_word_docx
 
 # Установите зависимости
 pip install -r requirements.txt
