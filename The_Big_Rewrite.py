@@ -130,22 +130,22 @@ class DocxReplacerApp:
         first_run = paragraph.runs[0] if paragraph.runs else None
         if first_run:
             font = first_run.font
-            formatting = {
-                'bold': font.bold,
-                'italic': False,
-                'underline': font.underline,
-                'color':  RGBColor(0, 0, 0),
-                'size': font.size,
-                'name': font.name
-            }
             # formatting = {
             #     'bold': font.bold,
-            #     'italic': font.italic,
+            #     'italic': False,
             #     'underline': font.underline,
-            #     'color': font.color.rgb if font.color else None,
+            #     'color':  RGBColor(0, 0, 0),
             #     'size': font.size,
             #     'name': font.name
             # }
+            formatting = {
+                'bold': font.bold,
+                'italic': font.italic,
+                'underline': font.underline,
+                'color': font.color.rgb if font.color else None,
+                'size': font.size,
+                'name': font.name
+            }
         
         # Полная замена во всем абзаце
         new_text_content = full_paragraph_text.replace(old_text, new_text)
